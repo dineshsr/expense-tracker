@@ -1,0 +1,26 @@
+{
+  "name": "expense-tracker-server",
+  "version": "1.0.0",
+  "description": "Expense Tracker App server code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dineshsr/expense-tracker.git"
+  },
+  "keywords": [
+    "expense",
+    "tracker",
+    "expense",
+    "manage",
+    "money"
+  ],
+  "author": "Dinesh Rajendran & Ashwin N S",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dineshsr/expense-tracker/issues"
+  },
+  "homepage": "https://github.com/dineshsr/expense-tracker#readme"
+}
