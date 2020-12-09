@@ -1,2 +1,2 @@
 # Expense Tracker
-Expense Tracker built with React, Node and Mongo DB
+Expense Tracker built with React, Node and Mongo DB.
