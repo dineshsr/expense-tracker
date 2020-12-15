@@ -10,7 +10,7 @@ import {
     FormControl,
     FormGroup,
     Panel,
-    Row,Icon
+    Row
 } from 'rsuite';
 
 import 'rsuite/dist/styles/rsuite-default.css';
@@ -19,17 +19,17 @@ const maxHeight = {
     height: '100vh'
 };
 const headerStyles = {
-    backgroundColor: "Orange",
+    backgroundColor: "#166678",
     overflowX: 'hidden',
-    height: '100vh'
+    height: '100vh',
+    color:'White'
 };
 const loginBox = {
-    backgroundColor: "Red",
-    marginTop:"50%",
-    border:'solid white'
+    backgroundColor: '#7db9b3',
+    marginTop:"50%"
 };
 const prodDetails = {
-    backgroundColor:'white',
+    backgroundColor:'#7db9b3',
     marginTop:"50%"
 };
 
@@ -50,13 +50,13 @@ const UserHome = () => {
                         </Content>
                     </Col>
                     <Col xs={24} sm={24} md={12}>
-                        <Content style={{backgroundColor: "Green"}}>
+                        <Content>
                             <FlexboxGrid justify="center" style={maxHeight}>
                                 <FlexboxGrid.Item colspan={12}>
                                     <Panel header={<h3>Login</h3>} style={loginBox}>
                                         <Form fluid>
                                             <FormGroup>
-                                                <ControlLabel><Icon icon='envelope'/> Email address</ControlLabel>
+                                                <ControlLabel>Email address</ControlLabel>
                                                 <FormControl name="name"/>
 
                                             </FormGroup>
