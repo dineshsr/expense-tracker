@@ -24,6 +24,10 @@ const primaryButton = {
     backgroundColor: "#166678",
     color: 'white'
 };
+const linkButton = {
+    color: '#166678',
+    position: 'inline'
+}
 const fullPage = {
     backgroundColor: '#FFF',
     height: '100vh'
@@ -31,9 +35,10 @@ const fullPage = {
 const totalPanel = {
     backgroundColor: '#FFF',
     margin: "100px",
-    position:'absolute',
+    position: 'relative',
+    height: 'auto',
     boxShadow: "3px 3px 18px grey",
-    zIndex:2
+    zIndex: 2
 };
 const panelLeft = {
     backgroundColor: '#E8FFFD',
@@ -45,12 +50,12 @@ const panelRight = {
 const ellipseBg = {
     height: '100vh',
     width: '100vh',
-    marginLeft:'-60vh',
+    marginLeft: '-60vh',
     backgroundColor: '#166678',
     borderRadius: '50%',
     float: 'left',
-    zIndex:1,
-    position:'relative'
+    zIndex: 1,
+    position: 'absolute'
 };
 
 const UserHome = () => {
@@ -109,18 +114,20 @@ const UserHome = () => {
                                         <FormGroup fluid>
                                             <FormControl name="password" type="password" placeholder="Password"/>
                                         </FormGroup>
-                                        <Checkbox id='agreement'> I agree to the Terms of service and Privacy policies
+                                        <Checkbox id='agreement' style={{marginBottom:10}}> I agree to the Terms of service and Privacy policies
                                             of Expense Manager</Checkbox>
                                         <FormGroup>
-                                            <ButtonToolbar>
-                                                <Button style={primaryButton} block>SIGN UP</Button>
-                                            </ButtonToolbar>
+                                            <Button style={primaryButton} block>SIGN UP</Button>
                                         </FormGroup>
                                         <Divider/>
                                         <FormGroup>
-                                            <ButtonToolbar>
+                                                <p style={{marginBottom:10}}>
+                                                    Already have an account?
+                                                    <Button appearance="link" style={{linkButton,marginTop:-2}}>
+                                                        Sign in
+                                                    </Button>
+                                                </p>
                                                 <Button style={primaryButton} block>Try as Demo User</Button>
-                                            </ButtonToolbar>
                                         </FormGroup>
                                     </Form>
                                 </Panel>
