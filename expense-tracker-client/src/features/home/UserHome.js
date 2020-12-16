@@ -1,11 +1,12 @@
 import {
     Button,
     ButtonToolbar,
+    Carousel,
+    Checkbox,
     Col,
     Container,
     Content,
-    ControlLabel,
-    FlexboxGrid,
+    Divider,
     Form,
     FormControl,
     FormGroup,
@@ -14,69 +15,119 @@ import {
 } from 'rsuite';
 
 import 'rsuite/dist/styles/rsuite-default.css';
+import logo from '../../images/logo-icon.png';
 
 const maxHeight = {
     height: '100vh'
 };
-const headerStyles = {
+const primaryButton = {
     backgroundColor: "#166678",
-    overflowX: 'hidden',
+    color: 'white'
+};
+const fullPage = {
+    backgroundColor: '#FFF',
+    height: '100vh'
+};
+const totalPanel = {
+    backgroundColor: '#FFF',
+    margin: "100px",
+    position:'absolute',
+    boxShadow: "3px 3px 18px grey",
+    zIndex:2
+};
+const panelLeft = {
+    backgroundColor: '#E8FFFD',
+}
+const panelRight = {
+    backgroundColor: '#FFF',
+    height: 'inherit'
+}
+const ellipseBg = {
     height: '100vh',
-    color:'White'
-};
-const loginBox = {
-    backgroundColor: '#7db9b3',
-    marginTop:"50%"
-};
-const prodDetails = {
-    backgroundColor:'#7db9b3',
-    marginTop:"50%"
+    width: '100vh',
+    marginLeft:'-60vh',
+    backgroundColor: '#bbb',
+    borderRadius: '50%',
+    float: 'left',
+    zIndex:1,
+    position:'relative'
 };
 
 const UserHome = () => {
     return (
-        <div className="show-container login-page">
-            <Container style={headerStyles}>
-                <Row>
-                    <Col xs={24} sm={24} md={12}>
-                        <Content >
-                            <FlexboxGrid justify="center" fluid>
-                                <FlexboxGrid.Item colspan={16}>
-                                    <Panel header={<h3>Expense Tracker</h3>} style={prodDetails} fluid>
-                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                                    </Panel>
-                                </FlexboxGrid.Item>
-                            </FlexboxGrid>
-                        </Content>
-                    </Col>
-                    <Col xs={24} sm={24} md={12}>
-                        <Content>
-                            <FlexboxGrid justify="center" style={maxHeight}>
-                                <FlexboxGrid.Item colspan={12}>
-                                    <Panel header={<h3>Login</h3>} style={loginBox}>
-                                        <Form fluid>
-                                            <FormGroup>
-                                                <ControlLabel>Email address</ControlLabel>
-                                                <FormControl name="name"/>
-
-                                            </FormGroup>
-                                            <FormGroup>
-                                                <ControlLabel>Password</ControlLabel>
-                                                <FormControl name="password" type="password"/>
-                                            </FormGroup>
-                                            <FormGroup>
-                                                <ButtonToolbar>
-                                                    <Button appearance="primary">Sign in</Button>
-                                                    <Button appearance="link">Forgot password?</Button>
-                                                </ButtonToolbar>
-                                            </FormGroup>
-                                        </Form>
-                                    </Panel>
-                                </FlexboxGrid.Item>
-                            </FlexboxGrid>
-                        </Content>
-                    </Col>
-                </Row>
+        <div className="show-container">
+            <Container style={fullPage}>
+                <Content>
+                    <span style={ellipseBg}></span>
+                    <Panel style={totalPanel}>
+                        <Row>
+                            <Col xsHidden md={12} style={panelLeft}>
+                                <Panel header={<h3>Expense Manager</h3>}>
+                                    <Carousel autoplay className="custom-slider">
+                                        <img
+                                            src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=1"
+                                            height="250"
+                                        />
+                                        <img
+                                            src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=2"
+                                            height="250"
+                                        />
+                                        <img
+                                            src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=3"
+                                            height="250"
+                                        />
+                                        <img
+                                            src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=4"
+                                            height="250"
+                                        />
+                                        <img
+                                            src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=5"
+                                            height="250"
+                                        />
+                                    </Carousel>
+                                </Panel>
+                            </Col>
+                            <Col md={12} style={panelRight}>
+                                <Panel>
+                                    <img
+                                        src={logo}
+                                        height={75}
+                                    />
+                                </Panel>
+                                <Panel header={<h3>Create your account</h3>}>
+                                    <Form fluid>
+                                        <FormGroup>
+                                            <FormControl name="fname" placeholder="First Name"/>
+                                        </FormGroup>
+                                        <FormGroup>
+                                            <FormControl name="lname" placeholder="Last Name"/>
+                                        </FormGroup>
+                                        <FormGroup>
+                                            <FormControl name="email" style={{width: 'maximum'}}
+                                                         placeholder="Email Address"/>
+                                        </FormGroup>
+                                        <FormGroup fluid>
+                                            <FormControl name="password" type="password" placeholder="Password"/>
+                                        </FormGroup>
+                                        <Checkbox id='agreement'> I agree to the Terms of service and Privacy policies
+                                            of Expense Manager</Checkbox>
+                                        <FormGroup>
+                                            <ButtonToolbar>
+                                                <Button style={primaryButton} block>SIGN UP</Button>
+                                            </ButtonToolbar>
+                                        </FormGroup>
+                                        <Divider/>
+                                        <FormGroup>
+                                            <ButtonToolbar>
+                                                <Button style={primaryButton} block>Try as Demo User</Button>
+                                            </ButtonToolbar>
+                                        </FormGroup>
+                                    </Form>
+                                </Panel>
+                            </Col>
+                        </Row>
+                    </Panel>
+                </Content>
             </Container>
         </div>
     );
