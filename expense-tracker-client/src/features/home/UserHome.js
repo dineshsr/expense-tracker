@@ -46,7 +46,7 @@ const ellipseBg = {
     height: '100vh',
     width: '100vh',
     marginLeft:'-60vh',
-    backgroundColor: '#bbb',
+    backgroundColor: '#166678',
     borderRadius: '50%',
     float: 'left',
     zIndex:1,
