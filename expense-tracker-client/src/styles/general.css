@@ -1,3 +1,18 @@
-.full-height {
-    height: 100vh;
+html {
+	min-height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
+	min-height: 10%;
+}
+
+.primaryButton {
+	background-color: "#166678";
+	color: "white";
+}
+.linkButton {
+	color: "#166678";
+	position: "inline";
 }

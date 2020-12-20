@@ -1,15 +1,19 @@
 import React from "react";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
-import UserHome from "./features/home/UserHome.js";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import "rsuite/dist/styles/rsuite-default.css";
+import "./styles/general.css";
+
+import LandingPage from "./components/auth/LandingPage";
 
 const Routes = () => {
-    return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/" component={UserHome} exact></Route>
-            </Switch>
-        </BrowserRouter>
-    );
+	return (
+		<BrowserRouter>
+			<Switch>
+				<Route exact path="/" component={LandingPage} exact></Route>
+			</Switch>
+		</BrowserRouter>
+	);
 };
 
 export default Routes;
