@@ -51,29 +51,34 @@ const LandingPage = () => {
 										<img
 											src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=1"
 											height="250"
+											alt="images"
 										/>
 										<img
 											src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=2"
 											height="250"
+											alt="images"
 										/>
 										<img
 											src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=3"
 											height="250"
+											alt="images"
 										/>
 										<img
 											src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=4"
 											height="250"
+											alt="images"
 										/>
 										<img
 											src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=5"
 											height="250"
+											alt="images"
 										/>
 									</Carousel>
 								</Panel>
 							</Col>
 							<Col md={12} style={panelRight}>
 								<Panel>
-									<img src={logo} height={75} />
+									<img src={logo} height={75} alt="logo" />
 								</Panel>
 								<SignUp />
 							</Col>
