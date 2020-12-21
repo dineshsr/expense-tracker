@@ -10,7 +10,7 @@ const Routes = () => {
 	return (
 		<BrowserRouter>
 			<Switch>
-				<Route exact path="/" component={LandingPage} exact></Route>
+				<Route path="/signup" component={LandingPage} exact></Route>
 			</Switch>
 		</BrowserRouter>
 	);
