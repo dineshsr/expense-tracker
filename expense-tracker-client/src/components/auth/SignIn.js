@@ -1,26 +1,14 @@
-import {
-	Button,
-	Checkbox,
-	Divider,
-	Form,
-	FormControl,
-	FormGroup,
-	Panel,
-	Row
-} from "rsuite";
+import React from "react";
+import { Button, Panel, Divider, Form, FormControl, FormGroup } from "rsuite";
 
 import "rsuite/dist/styles/rsuite-default.css";
+import "../../styles/general.css";
 
 const SignIn = () => {
 	return (
 		<React.Fragment>
+			<Panel header={<h3>Login into Expense Tracker</h3>}></Panel>
 			<Form fluid>
-				<FormGroup>
-					<FormControl name="fname" placeholder="First Name" />
-				</FormGroup>
-				<FormGroup>
-					<FormControl name="lname" placeholder="Last Name" />
-				</FormGroup>
 				<FormGroup>
 					<FormControl
 						name="email"
@@ -35,31 +23,14 @@ const SignIn = () => {
 						placeholder="Password"
 					/>
 				</FormGroup>
-				<Checkbox id="agreement" style={{ marginBottom: 10 }}>
-					{" "}
-					I agree to the Terms of service and Privacy policies of
-					Expense Manager
-				</Checkbox>
 				<FormGroup>
-					<Button style={primaryButton} block>
-						SIGN UP
+					<Button className="primaryButton" block>
+						SIGN IN
 					</Button>
 				</FormGroup>
 				<Divider />
 				<FormGroup>
-					<p style={{ marginBottom: 10 }}>
-						Already have an account?
-						<Button
-							appearance="link"
-							style={{
-								linkButton,
-								marginTop: -2
-							}}
-						>
-							Sign in
-						</Button>
-					</p>
-					<Button style={primaryButton} block>
+					<Button className="primaryButton" block>
 						Try as Demo User
 					</Button>
 				</FormGroup>
@@ -67,3 +38,5 @@ const SignIn = () => {
 		</React.Fragment>
 	);
 };
+
+export default SignIn;

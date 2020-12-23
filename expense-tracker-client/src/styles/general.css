@@ -1,18 +1,53 @@
 html {
 	min-height: 100%;
 }
+
 body {
 	margin: 0;
 	padding: 0;
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
-	min-height: 10%;
+	min-height: 100%;
 }
 
 .primaryButton {
-	background-color: "#166678";
-	color: "white";
+	background-color: #166678;
+	color: white;
 }
 .linkButton {
-	color: "#166678";
-	position: "inline";
+	color: #166678;
+	position: inline;
+}
+
+.totalPanel {
+	background-color: #fff;
+	position: absolute;
+	box-shadow: 3px 3px 18px grey;
+	z-index: 2;
+}
+
+.verticalCenter {
+	margin: 0 10% 0 10%;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.panelLeft {
+	background-color: #e8fffd;
+}
+
+.panelRight {
+	background-color: #fff;
+}
+
+.ellipseBg {
+	height: 100%;
+	width: 50%;
+	margin-left: -30%;
+	background-color: #166678;
+	border-radius: 100%;
+	float: left;
+	z-index: 1;
+	position: absolute;
 }

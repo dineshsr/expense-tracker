@@ -2,48 +2,25 @@ import React from "react";
 import { Carousel, Col, Container, Content, Panel, Row } from "rsuite";
 
 import "rsuite/dist/styles/rsuite-default.css";
-import "../../styles/general.css";
 import logo from "../../images/logo-icon.png";
+import "../../styles/general.css";
 
 import SignUp from "./SignUp";
-
-const totalPanel = {
-	backgroundColor: "#FFF",
-	margin: "100px",
-	position: "relative",
-	height: "auto",
-	boxShadow: "3px 3px 18px grey",
-	zIndex: 2
-};
-const panelLeft = {
-	backgroundColor: "#E8FFFD",
-	minHeight: "100%"
-};
-const panelRight = {
-	backgroundColor: "#FFF",
-	height: "inherit"
-};
-const ellipseBg = {
-	height: "100%",
-	width: "50%",
-	marginLeft: "-30%",
-	backgroundColor: "#166678",
-	borderRadius: "100%",
-	float: "left",
-	zIndex: 1,
-	position: "absolute"
-};
+import SignIn from "./SignIn";
 
 const LandingPage = () => {
 	return (
 		<div className="show-container">
 			<Container>
 				<Content>
-					<span style={ellipseBg}></span>
-					<Panel style={totalPanel}>
+					<span className="ellipseBg"></span>
+					<Panel className="totalPanel verticalCenter">
 						<Row>
-							<Col xsHidden md={12} style={panelLeft}>
-								<Panel header={<h3>Expense Manager</h3>}>
+							<Col xsHidden md={12}>
+								<Panel
+									className="panelLeft"
+									header={<h3>Expense Manager</h3>}
+								>
 									<Carousel
 										autoplay
 										className="custom-slider"
@@ -76,7 +53,7 @@ const LandingPage = () => {
 									</Carousel>
 								</Panel>
 							</Col>
-							<Col md={12} style={panelRight}>
+							<Col md={12} className="panelRight">
 								<Panel>
 									<img src={logo} height={75} alt="logo" />
 								</Panel>

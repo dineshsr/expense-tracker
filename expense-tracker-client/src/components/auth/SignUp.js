@@ -1,16 +1,8 @@
 import React from "react";
-import {
-	Button,
-	Checkbox,
-	Divider,
-	Form,
-	FormControl,
-	FormGroup,
-	Panel
-} from "rsuite";
+import { Button, Divider, Form, FormControl, FormGroup, Panel } from "rsuite";
 
-import "../../styles/general.css";
 import "rsuite/dist/styles/rsuite-default.css";
+import "../../styles/general.css";
 
 const SignUp = () => {
 	return (
@@ -37,11 +29,6 @@ const SignUp = () => {
 							placeholder="Password"
 						/>
 					</FormGroup>
-					<Checkbox id="agreement" style={{ marginBottom: 10 }}>
-						{" "}
-						I agree to the Terms of service and Privacy policies of
-						Expense Manager
-					</Checkbox>
 					<FormGroup>
 						<Button className="primaryButton" block>
 							SIGN UP
@@ -54,9 +41,7 @@ const SignUp = () => {
 							<Button
 								appearance="link"
 								className="linkButton"
-								style={{
-									marginTop: -2
-								}}
+								style={{ marginTop: -2 }}
 							>
 								Sign in
 							</Button>
