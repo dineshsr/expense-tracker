@@ -1,3 +1,97 @@
-.full-height {
-    height: 100vh;
+html {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
+	min-height: 100%;
+}
+
+.primaryButton {
+	background-color: #166678;
+	color: white;
+}
+.linkButton {
+	color: #166678;
+	position: inline;
+}
+
+.totalPanel {
+	background-color: #e8fffd;
+	box-shadow: 3px 3px 18px grey;
+	z-index: 2;
+	border-radius: 10px;
+	min-height: 65%;
+	min-width: 80%;
+	padding: 25px;
+}
+
+.verticalCenter {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.panelLeft {
+	padding: 25px;
+	position: inline-block;
+	float: left;
+	width: 50%;
+	border-radius: 10px 0 0 10px;
+}
+
+.panelRight {
+	border-radius: 0 10px 10px 0;
+	padding: 25px;
+	max-height: 65%;
+	float: right;
+	width: 50%;
+}
+
+.ellipseBg {
+	height: 100%;
+	width: 50%;
+	margin-left: -30%;
+	background-color: #166678;
+	border-radius: 100%;
+	float: left;
+	z-index: 1;
+	position: absolute;
+}
+
+@media screen and (max-width: 992px) {
+	.totalPanel {
+		background-color: #fff;
+		box-shadow: 3px 3px 18px grey;
+		border-radius: 10px;
+		min-height: 70%;
+		padding: 0;
+	}
+	.panelLeft {
+		padding: 0px;
+		visibility: hidden;
+		width: 0%;
+		clear: both;
+		display: block;
+	}
+	.panelRight {
+		background-color: #fff;
+		border-radius: 10px 10px 10px 10px;
+		padding: 25px;
+		max-height: 65%;
+		float: right;
+		width: 100%;
+	}
+	.ellipseBg {
+		clear: both;
+		display: block;
+		background-color: #166678;
+		width: 150%;
+		border-radius: 0px;
+	}
 }
