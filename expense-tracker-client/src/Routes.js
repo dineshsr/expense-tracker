@@ -4,13 +4,15 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "rsuite/dist/styles/rsuite-default.css";
 import "./styles/general.css";
 
-import LandingPage from "./components/auth/LandingPage";
+import SignUp from "./components/auth/SignUp";
+import SignIn from "./components/auth/SignIn";
 
 const Routes = () => {
 	return (
 		<BrowserRouter>
 			<Switch>
-				<Route path="/signup" component={LandingPage} exact></Route>
+				<Route path="/signup" component={SignUp} exact></Route>
+				<Route path="/" component={SignIn} exact></Route>
 			</Switch>
 		</BrowserRouter>
 	);
