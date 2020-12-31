@@ -3,24 +3,26 @@ import { Button, Panel, Divider, Form, FormControl, FormGroup } from "rsuite";
 
 import "rsuite/dist/styles/rsuite-default.css";
 import "../../styles/general.css";
+import "../../styles/styles.css";
 
 const SignIn = () => {
 	return (
 		<div className="backGround">
 			<div className="Login verticalCenter">
-				<Button className="secButton" style={{ float: "right" }}>
+				<Button className="secButton signupRedirect" block>
 					Already have an account?
 				</Button>
 				<React.Fragment>
 					<Panel
 						header={
 							<div>
-								<h3>Create your Expensify Account</h3>
+								<h3>Sign up </h3>
+								<h5>Create your Expensify Account</h5>
 							</div>
 						}
-						style={{ marginTop: "20px" }}
+						className="LoginSignupPanel"
 					/>
-					<Form fluid>
+					<Form fluid className="formStyles">
 						<FormGroup>
 							<FormControl
 								name="fname"
@@ -33,11 +35,10 @@ const SignIn = () => {
 						<FormGroup>
 							<FormControl
 								name="email"
-								style={{ width: "maximum" }}
 								placeholder="Email Address"
 							/>
 						</FormGroup>
-						<FormGroup fluid>
+						<FormGroup>
 							<FormControl
 								name="password"
 								type="password"

@@ -1,0 +1,9 @@
+.signupRedirect {
+	float: right;
+}
+
+@media all and (max-width: 765px) {
+	.signupRedirect {
+		float: inherit;
+	}
+}
