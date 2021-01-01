@@ -6,13 +6,15 @@ import "./styles/general.css";
 
 import SignUp from "./components/auth/SignUp";
 import SignIn from "./components/auth/SignIn";
+import UserDashboard from "./components/user/UserDashboard";
 
 const Routes = () => {
 	return (
 		<BrowserRouter>
 			<Switch>
 				<Route path="/signup" component={SignUp} exact></Route>
-				<Route path="/" component={SignIn} exact></Route>
+				<Route path="/signin" component={SignIn} exact></Route>
+				<Route path="/" component={UserDashboard} exact></Route>
 			</Switch>
 		</BrowserRouter>
 	);

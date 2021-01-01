@@ -22,9 +22,11 @@ body {
 	color: var(--white);
 	background-color: var(--primary);
 }
+
 .secButton {
 	background-color: var(--light-white);
 	color: var(--primary);
+	width: fit-content;
 }
 
 .backGround {
@@ -36,7 +38,7 @@ body {
 
 .verticalCenter {
 	margin: 0;
-	width: 30%;
+	min-width: 40%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -51,5 +53,17 @@ body {
 	background-color: var(--white);
 }
 
-@media screen and (min-width: 992px) {
+.LoginSignupPanel {
+	margin-top: 20px;
+	margin-bottom: -20px;
+}
+
+.formStyles {
+	padding: 0 20px;
+}
+
+@media all and (max-width: 765px) {
+	.formStyles {
+		padding: 0px;
+	}
 }
