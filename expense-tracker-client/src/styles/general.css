@@ -70,6 +70,22 @@ body {
 	margin-bottom: 100px;
 }
 
+#navBar > ul > li > a > img {
+	margin-left: -43px;
+	height: 30px;
+	width: 30px;
+	margin-top: -5px;
+	opacity: 0.5;
+}
+
+.navBar {
+	float: left;
+}
+
+.rightView {
+	text-align: center;
+}
+
 @media all and (max-width: 765px) {
 	.formStyles {
 		padding: 0px;

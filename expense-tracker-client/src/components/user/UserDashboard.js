@@ -1,17 +1,12 @@
 import React from "react";
-import Navbar from "./Navbar";
 import BaseNavbar from "./BaseNavbar";
 
 const test = () => {
-	return <div>Hellooo</div>;
+	return <div>From Dashboard</div>;
 };
 
 const UserDashboard = () => {
-	return (
-		<div>
-			<BaseNavbar>{test()}</BaseNavbar>
-		</div>
-	);
+	return <BaseNavbar>{test()}</BaseNavbar>;
 };
 
 export default UserDashboard;

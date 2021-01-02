@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { Sidenav, Nav, Icon } from "rsuite";
+import logo from "../../images/icons/logo/logo.png";
+import dashboard from "../../images/icons/dashboard.png";
+import settings from "../../images/icons/settings.png";
+import wallet from "../../images/icons/wallet.png";
+import transaction from "../../images/icons/transaction.png";
 
-const BaseNavbar = () => {
+const Navbar = () => {
 	const [state, setState] = useState({
 		activeKey: "1"
 	});
@@ -12,7 +17,7 @@ const BaseNavbar = () => {
 	};
 	return (
 		<div>
-			<div>
+			<div className="navBar">
 				<Sidenav
 					expanded={false}
 					activeKey={state.activeKey}
@@ -22,25 +27,37 @@ const BaseNavbar = () => {
 						<Nav id="navBar">
 							<Nav.Item
 								eventKey="0"
-								icon={<Icon icon="dashboard" />}
+								icon={
+									<img
+										alt="logo"
+										src={logo}
+										style={{ opacity: 1 }}
+									/>
+								}
 							>
 								Home
 							</Nav.Item>
 							<Nav.Item
 								eventKey="1"
-								icon={<Icon icon="dashboard" />}
+								icon={<img alt="logo" src={dashboard} />}
 							>
 								Dashboard
 							</Nav.Item>
-							<Nav.Item eventKey="2" icon={<Icon icon="group" />}>
-								User Group
+							<Nav.Item
+								eventKey="2"
+								icon={<img alt="logo" src={wallet} />}
+							>
+								Wallet
 							</Nav.Item>
-							<Nav.Item eventKey="3" icon={<Icon icon="magic" />}>
-								Advanced
+							<Nav.Item
+								eventKey="3"
+								icon={<img alt="logo" src={transaction} />}
+							>
+								Transactions
 							</Nav.Item>
 							<Nav.Item
 								eventKey="4"
-								icon={<Icon icon="gear-circle" />}
+								icon={<img alt="logo" src={settings} />}
 							>
 								Settings
 							</Nav.Item>
@@ -48,8 +65,11 @@ const BaseNavbar = () => {
 					</Sidenav.Body>
 				</Sidenav>
 			</div>
+			<div id="rightView" className="rightView">
+				From Navbar
+			</div>
 		</div>
 	);
 };
 
-export default BaseNavbar;
+export default Navbar;

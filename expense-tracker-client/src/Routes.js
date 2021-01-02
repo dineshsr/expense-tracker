@@ -6,7 +6,7 @@ import "./styles/general.css";
 
 import SignUp from "./components/auth/SignUp";
 import SignIn from "./components/auth/SignIn";
-import UserDashboard from "./components/user/UserDashboard";
+import Navbar from "./components/user/Navbar";
 
 const Routes = () => {
 	return (
@@ -14,7 +14,7 @@ const Routes = () => {
 			<Switch>
 				<Route path="/signup" component={SignUp} exact></Route>
 				<Route path="/signin" component={SignIn} exact></Route>
-				<Route path="/" component={UserDashboard} exact></Route>
+				<Route path="/" component={Navbar} exact></Route>
 			</Switch>
 		</BrowserRouter>
 	);
