@@ -64,6 +64,7 @@ body {
 
 #navBar > ul {
 	min-height: 100vh;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #navBar > ul > li {
@@ -83,7 +84,17 @@ body {
 }
 
 .rightView {
-	text-align: center;
+	margin-left: 56px;
+	min-height: 100vh;
+	background-color: var(--light-white);
+	position: relative;
+}
+
+.rightBody {
+	padding: 15px 15px 15px 20px;
+	max-height: 100vh;
+	position: absolute;
+	overflow-y: hidden;
 }
 
 @media all and (max-width: 765px) {
