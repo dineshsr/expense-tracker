@@ -62,6 +62,14 @@ body {
 	padding: 0 20px;
 }
 
+#navBar > ul {
+	min-height: 100vh;
+}
+
+#navBar > ul > li {
+	margin-bottom: 100px;
+}
+
 @media all and (max-width: 765px) {
 	.formStyles {
 		padding: 0px;

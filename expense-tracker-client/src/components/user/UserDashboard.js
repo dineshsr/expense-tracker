@@ -1,30 +1,15 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
+import Navbar from "./Navbar";
+import BaseNavbar from "./BaseNavbar";
 
-const leftPanel = () => {
-	return (
-		<div>
-			<Redirect to="/signin">Sign</Redirect>
-		</div>
-	);
-};
-
-const content = () => {
-	return (
-		<div className="Login verticalCenter">
-			<h2>Logged In!</h2>
-			<button className="primaryButton" onClick={leftPanel}>
-				Click me!
-			</button>
-		</div>
-	);
+const test = () => {
+	return <div>Hellooo</div>;
 };
 
 const UserDashboard = () => {
 	return (
 		<div>
-			{content()}
-			{leftPanel()}
+			<BaseNavbar>{test()}</BaseNavbar>
 		</div>
 	);
 };
